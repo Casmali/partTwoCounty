@@ -11,27 +11,6 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <a class="navbar-brand" href=".">Conversion website!</a>
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavBar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavBar">
-        <ul class="nav navbar-nav">
-          <li {% if active_page == "index" %} class="active" {% endif %}><a href=".">Home</a></li>
-          <li {% if active_page == "fir" %} class="active" {% endif %}><a href="fir">Inches to Cm</a></li>
-		  <li {% if active_page == "sec" %} class="active" {% endif %}><a href="sec">Inches to Feet</a></li>
-          <li {% if active_page == "thi" %} class="active" {% endif %}><a href="thi">Miles to Inches</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
   {% block content %}{% endblock %}
   </body>
  </html>
