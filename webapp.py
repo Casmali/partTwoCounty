@@ -2,9 +2,13 @@ from flask import Flask, url_for, render_template, request
 
 app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  Otherwise, it is the name of the file (ex. webapp)
 
+def main():
+    with open('county_demographics.json') as demographics_data:
+        gloal counties = json.load(demographics_data)
+
 @app.route("/")
 def render_main():
-    return render_template('index.html')
+    return render_template('index.html', )
 
 @app.route("/response")
 def render_response():
