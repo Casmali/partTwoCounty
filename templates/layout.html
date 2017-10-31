@@ -12,5 +12,14 @@
 
 <body>
   {% block content %}{% endblock %}
+  
+  <form action="/response">
+  <select name="cars">
+    {{ val }}
+  </select>
+  <br><br>
+    
+  <input type="submit">
+  </form>
   </body>
  </html>
