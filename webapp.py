@@ -12,8 +12,10 @@ def render_main():
 
 def getStateOptions(counties):
     ret = ""
+    lis = {"doestmantter":True}
     for i in counties:
-        ret += Markup("<option value=\"" + i[State] + "\">" + i[State] + "</option>")
+        if !(i["State"] in lis):
+            ret += Markup("<option value=\"" + i[State] + "\">" + i[State] + "</option>")
     return ret
 
 #@app.route("/response")
