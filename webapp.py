@@ -7,13 +7,10 @@ app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  
 @app.route("/")
 def render_main():
     with open('static/county_demographics.json') as demographics_data:
-        gloal counties = json.load(demographics_data)
-    ret = ""
-    for i in counties:
-        ret += Markup("<option value=\"" + i[State] + "\">" + i[State] + "</option>")
-    return render_template('index.html',getStateOptions())
+        counties = json.load(demographics_data)
+    return render_template('index.html',getStateOptions(counties))
 
-def getStateOptions():
+def getStateOptions(counties):
     ret = ""
     for i in counties:
         ret += Markup("<option value=\"" + i[State] + "\">" + i[State] + "</option>")
