@@ -4,12 +4,10 @@ import json
 
 app = Flask(__name__) #__name__ = "__main__" if this is the file that was run.  Otherwise, it is the name of the file (ex. webapp)
 
-def main():
-    with open('static/county_demographics.json') as demographics_data:
-        gloal counties = json.load(demographics_data)
-
 @app.route("/")
 def render_main():
+    with open('static/county_demographics.json') as demographics_data:
+        gloal counties = json.load(demographics_data)
     ret = ""
     for i in counties:
         ret += Markup("<option value=\"" + i[State] + "\">" + i[State] + "</option>")
