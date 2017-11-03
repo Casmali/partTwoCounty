@@ -10,13 +10,13 @@ def render_main():
         counties = json.load(demographics_data)
     return render_template('index.html',val = "")
 
-def getStateOptions(counties):
-    ret = ""
-    lis = {"doestmantter":True}
-    for i in counties:
-        if !(i["State"] in lis):
-            ret += Markup("<option value=\"" + i[State] + "\">" + i[State] + "</option>")
-    return ret
+#def getStateOptions(counties):
+#    ret = ""
+#    lis = {"doestmantter":True}
+#    for i in counties:
+#        if !(i["State"] in lis):
+#            ret += Markup("<option value=\"" + i[State] + "\">" + i[State] + "</option>")
+#    return ret
 
 #@app.route("/response")
 #def render_response():
