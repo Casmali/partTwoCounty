@@ -15,7 +15,7 @@ def getStateOptions(counties):
     ret = ""
     lis = {"doestmantter":True}
     for i in counties:
-        if !(i["State"] in lis):
+        if not(i["State"] in lis):
             ret += Markup("<option value=\"" + i['State'] + "\">" + i['State'] + "</option>")
             lis[i['State']] = True
     return ret
