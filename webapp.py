@@ -19,7 +19,6 @@ def getStateOptions(counties):
             ret += Markup("<option value=\"" + i['State'] + "\">" + i['State'] + "</option>")
             lis[i['State']] = True
     return ret
-def returnFun(counties,state)
 
 @app.route("/response")
 def render_response():
