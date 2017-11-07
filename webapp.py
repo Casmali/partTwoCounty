@@ -19,7 +19,8 @@ def getStateOptions(counties):
             ret += Markup("<option value=\"" + i['State'] + "\">" + i['State'] + "</option>")
             lis[i['State']] = True
     return ret
-def returnFunFact(state)
+
+def returnFunFact(state):
         x = 0
         for i in counties:
                 if i['State'] == state:
