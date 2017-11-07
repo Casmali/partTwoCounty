@@ -25,7 +25,7 @@ def returnFunFact(state):
         for i in counties:
                 if i['State'] == state:
                         x += i['Population']['2014 Population']
-        y = "The populatin of all the counties in " + ins + " is: " + str(x)
+        y = "The populatin of all the counties in " + state + " is: " + str(x)
         return y 
 
 @app.route("/response")
