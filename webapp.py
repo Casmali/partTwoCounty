@@ -25,7 +25,7 @@ def render_response():
         ins = request.args['state']
         x = 0
         for i in counties:
-                if i['state'] == ins:
+                if i['State'] == ins:
                         x += i['Population']['2014 Population']
         y = "The populatin of all the counties in this state is: " + str(x)
         #The request object stores information that was sent by the client to the server.
