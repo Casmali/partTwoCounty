@@ -22,7 +22,7 @@ def getStateOptions(counties):
 
 @app.route("/response")
 def render_response():
-        ins = float(request.args['state'])
+        ins = request.args['state']
         x = 0
         for i in counties:
                 if i['state'] == ins:
